@@ -1,3 +1,7 @@
 ﻿  fractals.cpp
-C:\code\3D\lab1\lab1\fractals.cpp(20,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\code\3D\lab1\lab1\fractals.cpp(10,2): warning C4091: static : пропускается слева от "pixel", когда ни одна переменная не объявлена
+C:\code\3D\lab1\lab1\fractals.cpp(33,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\code\3D\lab1\lab1\fractals.cpp(76,34): warning C4018: <: несоответствие типов со знаком и без знака
+C:\code\3D\lab1\lab1\fractals.cpp(105,34): warning C4018: <: несоответствие типов со знаком и без знака
+C:\code\3D\lab1\lab1\fractals.cpp(129,24): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
   lab1.vcxproj -> C:\code\3D\lab1\Debug\lab1.exe

@@ -5,8 +5,16 @@
 #include "draw.h"
 #endif
 
+#include "thread"
+#include "atomic"
+#include "mutex"
+
 #include <complex>
 
-void newton_variation(Dot* Z1, Dot* Z2, double C);
-
-draw_atom_t* generate_fractals_atoms(int n, Dot& start, double c, void fractal_func(Dot*, Dot*, double));
+void draw_fractal(
+    HDC hdc,
+    int src_x,
+    int src_y,
+    int iterations,
+    double zoom
+);

@@ -120,36 +120,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             RECT rect = { 0 };
             GetWindowRect(hWnd, &rect);
 
-
             rect = {0};
-            int n = 256;
-            std::complex<int> start;
-            std::complex<int> finish;
-            int src_x = 240;
-            int src_y = 240;
-            int step_x = (finish.real() - start.real()) / src_x;
-            int step_y = (finish.imag() - start.imag()) / src_y;
-
-            std::complex<int> Z(0, 0), C(0, 0);
-
-
-            for (size_t i = 0; i < src_x; i++) {
-                for (size_t j = 0; j < src_y; j++) {
-                    C = std::complex<int>(start.real() + step_x * i, start.imag() + step_y * j);
-
-                    for (size_t k = 0; k < n; k++) {
-                        Z = Z * Z + C;
-                        if (std::abs(Z) > 2) {
-                            SetPixel(hdc, i, j, RGB(255, 255, 255));
-                        }
-                        else {
-                            SetPixel(hdc,i,j,RGB(0,0,0));
-                        }
-                    }
-
-
-                }
-            }
+            int n = 128;
+            double zoom = 1;
+            double offset = 1;
+            
+            draw_fractal(hdc,900,540,n,zoom);
 
             EndPaint(hWnd, &ps);
         }
