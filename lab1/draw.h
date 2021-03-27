@@ -6,9 +6,12 @@
 #include "framework.h"
 #endif
 
+#include "cmath"
+
 typedef enum draw_func :uint8_t {
 	move_to = 0,
-	line_to
+	line_to,
+	set_pixel
 }draw_func_t;
 
 struct Dot{
@@ -19,6 +22,7 @@ struct Dot{
 
 typedef struct draw_atom_s{
 	Dot pos;
+	COLORREF color;
 	draw_func_t func;
 }draw_atom_t;
 

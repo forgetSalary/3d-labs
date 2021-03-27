@@ -13,13 +13,15 @@ void newton_variation(Dot* Z1, Dot* Z2, double C) {
 	Z2->x + C, Z2->y + C;
 }
 
-draw_atom_t* generate_fractals_atoms(int n, Dot& start,double c,void fractal_func(Dot*,Dot*,double)) {
-	draw_atom_t* atoms = new draw_atom_t[n+1];
-	atoms[0].func = move_to;
-	atoms[0].pos = start;
-	for (size_t i = 1; i < n; i++){
-		atoms[i].func = line_to;
-		fractal_func(&atoms[i - 1].pos, &atoms[i].pos, c);
-	}
-	return atoms;
-}
+//draw_atom_t* generate_fractals_atoms(int n, Dot& start,double c,void fractal_func(Dot*,Dot*,double)) {
+//	draw_atom_t* atoms = new draw_atom_t[n+1];
+//	atoms[0].func = move_to;
+//	atoms[0].pos = start;
+//	for (size_t i = 1; i < n; i++){
+//		atoms[i].func = line_to;
+//		fractal_func(&atoms[i - 1].pos, &atoms[i].pos, c);
+//	}
+//	return atoms;
+//}
+
+ 

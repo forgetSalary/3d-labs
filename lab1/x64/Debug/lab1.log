@@ -1,0 +1,9 @@
+﻿  lab1.cpp
+D:\Users\student.CAD\source\repos\3d-labs\lab1\lab1.cpp(138,95): warning C4267: аргумент: преобразование из "size_t" в "const _Ty"; возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+D:\Users\student.CAD\source\repos\3d-labs\lab1\lab1.cpp(143,67): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Users\student.CAD\source\repos\3d-labs\lab1\lab1.cpp(146,58): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  lab1.vcxproj -> D:\Users\student.CAD\source\repos\3d-labs\x64\Debug\lab1.exe

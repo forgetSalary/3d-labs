@@ -10,7 +10,6 @@ HINSTANCE hInst;                                // текущий экземпл
 WCHAR szTitle[MAX_LOADSTRING];                  // Текст строки заголовка
 WCHAR szWindowClass[MAX_LOADSTRING];            // имя класса главного окна
 
-
 ATOM                MyRegisterClass(HINSTANCE hInstance);
 BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
@@ -118,13 +117,39 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             static HDC hdc = BeginPaint(hWnd, &ps);
 
-            Dot start = { 100,100,0 };
-            int n = 10;//fractals_itertions
-            static draw_atom_t* atoms = generate_fractals_atoms(n, start, 1, newton_variation);
+            RECT rect = { 0 };
+            GetWindowRect(hWnd, &rect);
 
-            static Figure domik(hdc, atoms, n);
 
-            domik.draw();
+            rect = {0};
+            int n = 256;
+            std::complex<int> start;
+            std::complex<int> finish;
+            int src_x = 240;
+            int src_y = 240;
+            int step_x = (finish.real() - start.real()) / src_x;
+            int step_y = (finish.imag() - start.imag()) / src_y;
+
+            std::complex<int> Z(0, 0), C(0, 0);
+
+
+            for (size_t i = 0; i < src_x; i++) {
+                for (size_t j = 0; j < src_y; j++) {
+                    C = std::complex<int>(start.real() + step_x * i, start.imag() + step_y * j);
+
+                    for (size_t k = 0; k < n; k++) {
+                        Z = Z * Z + C;
+                        if (std::abs(Z) > 2) {
+                            SetPixel(hdc, i, j, RGB(255, 255, 255));
+                        }
+                        else {
+                            SetPixel(hdc,i,j,RGB(0,0,0));
+                        }
+                    }
+
+
+                }
+            }
 
             EndPaint(hWnd, &ps);
         }

@@ -1,5 +1,4 @@
 #include "draw.h"
-#include "cmath"
 #define M_PI 3.14159265358979323846
 
 Figure::Figure() {
@@ -15,12 +14,17 @@ Figure::Figure(HDC hdc, draw_atom_t* atoms, int atoms_count) {
 }
 
 void Figure::draw() {
+	draw_func func;
 	for (size_t i = 0; i < atoms_count; i++){
-		if (atoms[i].func == move_to) {
+		func = atoms[i].func;
+		if (func == move_to) {
 			MoveToEx(hdc, atoms[i].pos.x, atoms[i].pos.y, NULL);
 		}
-		else if (atoms[i].func == line_to) {
+		else if (func == line_to) {
 			LineTo(hdc, atoms[i].pos.x, atoms[i].pos.y);
+		}
+		else if (func = set_pixel) {
+			SetPixel(hdc, atoms[i].pos.x, atoms[i].pos.y, atoms[i].color);
 		}
 
 	}
