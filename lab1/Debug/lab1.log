@@ -1,0 +1,3 @@
+﻿  fractals.cpp
+C:\code\3D\lab1\lab1\fractals.cpp(20,23): warning C4018: <: несоответствие типов со знаком и без знака
+  lab1.vcxproj -> C:\code\3D\lab1\Debug\lab1.exe
