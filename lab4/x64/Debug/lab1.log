@@ -1,0 +1,4 @@
+﻿  lab1.cpp
+C:\code\3D\lab 4\Lab 4\lab1\lab1.cpp(122,15): warning C4244: =: преобразование "WPARAM" в "char", возможна потеря данных
+C:\code\3D\lab 4\Lab 4\lab1\lab1.cpp(95,17): warning C4101: ps: неиспользованная локальная переменная
+  lab1.vcxproj -> C:\code\3D\lab 4\Lab 4\x64\Debug\lab1.exe
