@@ -1,0 +1,4 @@
+﻿  fractals.cpp
+C:\code\3D\lab 3\lab1\fractals.cpp(10,2): warning C4091: static : пропускается слева от "pixel", когда ни одна переменная не объявлена
+C:\code\3D\lab 3\lab1\fractals.cpp(32,19): warning C4244: инициализация: преобразование "unsigned __int64" в "int", возможна потеря данных
+  lab1.vcxproj -> C:\code\3D\lab 3\x64\Debug\lab1.exe
