@@ -1,0 +1,4 @@
+﻿  lab1.cpp
+E:\19vv3\lab2.1\lab1\lab1.cpp(175,1): warning C4010: однострочный комментарий содержит знак объединения строк
+E:\19vv3\lab2.1\lab1\lab1.cpp(96,17): warning C4101: ps: неиспользованная локальная переменная
+  lab1.vcxproj -> E:\19vv3\lab2.1\Debug\lab1.exe
